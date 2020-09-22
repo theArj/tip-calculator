@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <input type="bill" />
+    <input type="tip" />
+    <input type="people" />
+    <h1>display tip</h1>
+    <h1>display total</h1>
+    <script>
+      const billInput = document.querySelector("#billInput");
+      const billInput = document.querySelector("#tipInput");
+      const billInput = document.querySelector("#peopleInput");
+      const billInput = document.querySelector("#displayTip");
+      const billInput = document.querySelector("#displayTotal");
+
+      function calulateTip() {
+        const billValue = parseFloat(billInput.value);
+        const tipValue = parseFloat(tipInput.value);
+        const peopleValue = parseFloat(peopleInput.value);
+
+        const tip = bill * percent / 100
+        const total = bill + tip
+
+        
+      }
+
+      billInput.addEventListener("input", calculateTip);
+      tipInput.addEventListener("input", calculateTip);
+      peopleInput.addEventListener("input", calculateTip);
+    </script>
+  </body>
+</html>
