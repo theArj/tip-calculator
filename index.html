@@ -16,7 +16,14 @@
         <h1>Tip Calculator</h1>
         <form>
           <p>How much was your Bill?</p>
-          <p>$ <input id="billamount" type="number" placeholder="Enter bill amount..." /></p>
+          <p>
+            $
+            <input
+              id="billamount"
+              type="number"
+              placeholder="Enter bill amount..."
+            />
+          </p>
           <p>How was your service?</p>
           <select id="service">
             <option selected disabled value="0">Select Level of Service</option>
@@ -29,9 +36,16 @@
           </select>
 
           <p>How many people are sharing the Bill?</p>
-          <p><input id="peopleamount" type="number" placeholder="Enter # of people..." /> People</p>
+          <p>
+            <input
+              id="peopleamount"
+              type="number"
+              placeholder="Enter # of people..."
+            />
+            People
+          </p>
         </form>
-        <button type="button">Calculate</button>
+        <button type="button" id="btnClick">Calculate</button>
       </div>
 
       <div id="totaltip">

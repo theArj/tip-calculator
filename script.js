@@ -1,19 +1,18 @@
-function calculateTip(){
+function calculateTip() {
   const billamount = document.getElementById("billamount").value;
   const serviceamount = document.getElementById("service").value;
   const peopleamount = document.getElementById("peopleamount").value;
 
-  if(billamount === "" || serviceamount === 0){
+  if (billamount === "" || serviceamount === 0) {
     alert("Please enter value");
     return;
   }
 
-  if(peopleamount === "" || peopleamount <= 0){
+  if (peopleamount === "" || peopleamount <= 0) {
     peopleamount = 1;
-    document.getElementById("each").style.display="none";
-
-  }else{
-    document.getElementById("each").style.display="block";
+    document.getElementById("each").style.display = "none";
+  } else {
+    document.getElementById("each").style.display = "block";
   }
 
   const total = (billamount * serviceamount) / peopleamount;
@@ -21,7 +20,15 @@ function calculateTip(){
 
   total = total.toFixed(2); //rounds to two digits after decimal
 
+  document.getElementById("totaltip").style.display = "block";
+  document.getElementById("tip").innerHTML = total;
 }
+
+document.getElementById("totaltip").style.display = "none";
+document.getElementById("each").style.display = "none";
+document.getElementById("btnClick").onclick = function () {
+  calculateTip();
+};
 
 // // const display = document.querySelector("#display");
 // const billInput = document.querySelector("#bill");
