@@ -26,13 +26,22 @@ function calculateTip() {
 
   document.getElementById("totaltip").style.display = "block";
   document.getElementById("tip").innerHTML = total;
-}
 
-document.getElementById("totaltip").innerHTML = "total";
-document.getElementById("each").innerHTML = "each";
-document.getElementById("btnClick").onclick = function () {
+  document.getElementById("totaltip").style.display = "none";
+  document.getElementById("each").style.display = "none";
+
+  document.getElementById("btnClick").onclick = function () {
   calculateTip();
 };
+}
+
+
+// document.getElementById("totaltip").style.display = "none";
+// document.getElementById("each").style.display = "none";
+
+// document.getElementById("btnClick").onclick = function () {
+//   calculateTip();
+// };
 
 // Previously tested code:
 // const display = document.querySelector("#display");
@@ -65,6 +74,10 @@ document.getElementById("btnClick").onclick = function () {
 //   console.log("total", total);
 //   document.getElementById("calc").innerHTML = total;
 // }
+
+// billamount.addEventListener("input", calculateTip);
+// tipamount.addEventListener("input", calculateTip);
+// peopleamount.addEventListener("input", calculateTip);
 
 // document.getElementById("demo").innerHTML = total;
 // document.getElementById("calc").addEventListener("click", displayTotal);
