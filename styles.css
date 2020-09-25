@@ -1,5 +1,47 @@
-body {
+body{
+  font-family: sans-serif;
+  background-image: linear-gradient(to bottom right,
+  rgb(9, 98, 121),
+  rgb(34, 123, 206));
+}
+
+#container{
+  width: 300px;
+  height: 350px;
+  background: #f7f7f7;
+  border-radius: 10px;
+  margin: 100px auto;
+}
+
+h1{
+  background: grey;
+  color: black;
+  font-size: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 10px 10px 10px 60px;
+  text-transform: uppercase;
+}
+
+p{
+  padding-left: 20px;
+  font-size: 16px;
+}
+
+form input[type="number"]{
+  width: 150px;
+
+}
+
+input{
+  
+}
+
+/* body {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
     font-family: Times, "Times New Roman", serif;
     font-size: 18px;
     line-height: 1.5;
@@ -16,4 +58,6 @@ body {
     color: rgb(224, 155, 63);
     font-weight: bolder;
     font-size: 2.5em;
-  }
+    justify-content: center;
+    align-items: center;
+  } */

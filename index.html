@@ -2,26 +2,52 @@
 <html lang="en">
   <head>
     <title>Tip Calculator</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
   </head>
   <body>
-    <header>
-      <link rel="stylesheet" href="styles.css" />
-    </header>
+    <div id="container">
+      <h1>Tip Calculator</h1>
+      <form>
+        <p>How much was your Bill?</p>
+        <p>$ <input type="number" placeholder="Enter bill amount..." /></p>
+        <p>How was your service?</p>
+        <select>
+          <option value="0">Select Level of Service</option>
+          <option value="0.25">Outstanding Service</option>
+          <option value="0.2">Great Service</option>
+          <option value="0.15">Good Service</option>
+          <option value="0.1">OK Service</option>
+          <option value="0.05">Lousy Service</option>
+        </select>
 
+        <p>How many people are sharing the Bill?</p>
+        <p><input type="number" placeholder="Enter # of people..." /> People</p>
+      </form>
+      <button type="button">Calculate</button>
+    </div>
+  </body>
+</html>
+
+<!-- <div class = "container">
     <main>
       <h1>Tip Calculator</h1>
+
       <div id="input">
-        <label>Bill Amount $<input id="bill" value="0.00" type="number" /></label>
+        <label
+          >Bill Amount $<input id="bill" value="0.00" type="number"
+        /></label>
         <label>Tip Percent <input id="tip" value="0" type="number" /></label>
         <label
           >Number of People <input id="peopleInput" value="1" type="number"
         /></label>
         <button id="calc">Calculate</button>
-        <!-- <p id="demo"></p> -->
+        <p id="demo"></p>
         <h3>Total</h3>
         <h3>Tip Amount</h3>
-      </div>
-    </main>
-    <script src = "script.js"></script>
-  </body>
-</html>
+      </div> -->
