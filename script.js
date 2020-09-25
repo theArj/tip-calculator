@@ -1,7 +1,11 @@
 function calculateTip() {
-  const billamount = document.getElementById("billamount").value;
+  const billamount = parseInt(document.getElementById("billamount").value);
   const serviceamount = document.getElementById("service").value;
   const peopleamount = document.getElementById("peopleamount").value;
+
+  alert(
+    `Your suggested tip amount is: ${peopleamount}per peroson. Your service feedback was: ${service}.`
+  );
 
   if (billamount === "" || serviceamount === 0) {
     alert("Please enter value");
@@ -29,7 +33,6 @@ document.getElementById("each").style.display = "none";
 document.getElementById("btnClick").onclick = function () {
   calculateTip();
 };
-
 
 // Previously tested code:
 // const display = document.querySelector("#display");
