@@ -26,16 +26,16 @@ function calculateTip() {
 
   document.getElementById("totaltip").style.display = "block";
   document.getElementById("tip").innerHTML = total;
-
-  document.getElementById("totaltip").style.display = "none";
-  document.getElementById("each").style.display = "none";
-
-  document.getElementById("btnClick").onclick = function () {
-  calculateTip();
-};
 }
 
+document.getElementById("totaltip").style.display = "none";
+document.getElementById("each").style.display = "none";
 
+document.getElementById("btnClick").onclick = function () {
+  calculateTip();
+};
+
+// Previously tried code:
 // document.getElementById("totaltip").style.display = "none";
 // document.getElementById("each").style.display = "none";
 
