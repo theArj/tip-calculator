@@ -28,8 +28,8 @@ function calculateTip() {
   document.getElementById("tip").innerHTML = total;
 }
 
-document.getElementById("totaltip").style.display = "none";
-document.getElementById("each").style.display = "none";
+document.getElementById("totaltip").innerHTML = "total";
+document.getElementById("each").innerHTML = "each";
 document.getElementById("btnClick").onclick = function () {
   calculateTip();
 };
