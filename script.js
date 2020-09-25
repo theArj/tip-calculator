@@ -1,3 +1,7 @@
+const billamount = 
+
+
+
 // // const display = document.querySelector("#display");
 // const billInput = document.querySelector("#bill");
 // const tipInput = document.querySelector("#tip");
