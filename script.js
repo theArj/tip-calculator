@@ -30,7 +30,9 @@ document.getElementById("btnClick").onclick = function () {
   calculateTip();
 };
 
-// // const display = document.querySelector("#display");
+
+// Previously tested code:
+// const display = document.querySelector("#display");
 // const billInput = document.querySelector("#bill");
 // const tipInput = document.querySelector("#tip");
 // const peopleInput = document.querySelector("#people");
