@@ -1,4 +1,11 @@
-const billamount = 
+const billamount = document.getElementById("billamount").value;
+const serviceamount = document.getElementById("service").value;
+const peopleamount = document.getElementById("peopleamount").value;
+
+if(billamount === "" | serviceamount === 0){
+  alert("Please enter value");
+  return;
+}
 
 
 
