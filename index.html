@@ -5,15 +5,23 @@
   </head>
   <body>
     <header>
-      <link rel="stylesheet" href="styles.css"/>
+      <link rel="stylesheet" href="styles.css" />
     </header>
-    <input type="bill" />
-    <input type="tip" />
-    <input type="people" />
-    <h1>display tip</h1>
-    <h1>display total</h1>
-    <script>
-      src="script.js"
-    </script>
+
+    <main>
+      <h1>Tip Calculator</h1>
+      <div id="input">
+        <label>Bill Amount $<input id="bill" value="0.00" type="number" /></label>
+        <label>Tip Percent <input id="tip" value="0" type="number" /></label>
+        <label
+          >Number of People <input id="peopleInput" value="1" type="number"
+        /></label>
+        <button id="calc">Calculate</button>
+        <!-- <p id="demo"></p> -->
+        <h3>Total</h3>
+        <h3>Tip Amount</h3>
+      </div>
+    </main>
+    <script src = "script.js"></script>
   </body>
 </html>

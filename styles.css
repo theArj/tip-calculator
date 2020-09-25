@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    font-family: Times, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #eee;
+    background-image: linear-gradient(
+      to bottom right,
+      rgb(9, 98, 121),
+      rgb(34, 123, 206)
+    )
+    
+  }
+
+  h1 {
+    color: rgb(224, 155, 63);
+    font-weight: bolder;
+    font-size: 2.5em;
+  }
