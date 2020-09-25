@@ -1,87 +1,31 @@
-function calculateTip() {
-  const billamount = parseInt(document.getElementById("billamount").value);
-  const serviceamount = document.getElementById("service").value;
-  const peopleamount = document.getElementById("peopleamount").value;
+const inputBill = document.getElementById("input-bill");
+const inputTip = document.getElementById("input-tip");
+const inputPeople = document.getElementById("input-people");
+const displayTip = document.getElementById("display-tip");
+const displayTotal = document.getElementById("display-total");
+const displayEach = document.getElementById("display-each");
 
-  alert(
-    `Your suggested tip amount is: ${peopleamount}per peroson. Your service feedback was: ${service}.`
-  );
+let bill = 0;
 
-  if (billamount === "" || serviceamount === 0) {
-    alert("Please enter value");
-    return;
-  }
+inputPeople.addEventListener("change", handleBill);
+inputBill.addEventListener("change", handleBill);
+inputTip.addEventListener("change", handleBill);
 
-  if (peopleamount === "" || peopleamount <= 0) {
-    peopleamount = 1;
-    document.getElementById("each").style.display = "none";
-  } else {
-    document.getElementById("each").style.display = "block";
-  }
+function handleBill() {
+  const percent = parseInt(inputTip.value);
+  const bill = parseFloat(inputBill.value);
+  const people = parseInt(inputPeople.value);
 
-  const total = (billamount * serviceamount) / peopleamount;
-  total = Math.round(total * 100) / 100;
+  const tip = (bill * percent) / 100;
+  const total = bill + tip;
+  const per_person = total / people;
 
-  total = total.toFixed(2); //rounds to two digits after decimal
+  console.log(total);
+  console.log(per_person);
 
-  document.getElementById("totaltip").style.display = "block";
-  document.getElementById("tip").innerHTML = total;
+  console.log(percent, bill, people, tip, total, per_person);
+
+  displayTip.innerHTML = tip.toFixed(2);
+  displayTotal.innerHTML = total.toFixed(2);
+  displayEach.innerHTML = per_person.toFixed(2);
 }
-
-document.getElementById("totaltip").style.display = "none";
-document.getElementById("each").style.display = "none";
-
-document.getElementById("btnClick").onclick = function () {
-  calculateTip();
-};
-
-// Previously tried code:
-// document.getElementById("totaltip").style.display = "none";
-// document.getElementById("each").style.display = "none";
-
-// document.getElementById("btnClick").onclick = function () {
-//   calculateTip();
-// };
-
-// Previously tested code:
-// const display = document.querySelector("#display");
-// const billInput = document.querySelector("#bill");
-// const tipInput = document.querySelector("#tip");
-// const peopleInput = document.querySelector("#people");
-
-// billInput.addEventListener("input", calculateTip);
-// tipInput.addEventListener("input", calculateTip);
-// peopleInput.addEventListener("input", calculateTip);
-
-// const displayInput = document.querySelector("#displayTip");
-// const Input = document.querySelector("#displayTotal");
-
-// function calculateTip() {
-//   const billValue = parseFloat(billInput.value);
-//   const tipValue = parseFloat(tipInput.value);
-//   const peopleValue = parseFloat(peopleInput.value);
-//   //   console.log("The bill is ", billValue);
-//   //   console.log("The tip is ", tipValue);
-//   //   console.log("The number of people are ", peopleValue);
-//   const tipAmount = (billValue * (tipValue / 100)) / peopleValue;
-//   console.log(tipAmount);
-//   display.innerHTML = tipAmount;
-// }
-
-// calculateTip();
-
-// function displayTotal() {
-//   console.log("total", total);
-//   document.getElementById("calc").innerHTML = total;
-// }
-
-// billamount.addEventListener("input", calculateTip);
-// tipamount.addEventListener("input", calculateTip);
-// peopleamount.addEventListener("input", calculateTip);
-
-// document.getElementById("demo").innerHTML = total;
-// document.getElementById("calc").addEventListener("click", displayTotal);
-
-// // billInput.addEventListener("input", calculateTip);
-// // tipInput.addEventListener("input", calculateTip);
-// // peopleInput.addEventListener("input", calculateTip);

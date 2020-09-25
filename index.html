@@ -1,57 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Enter head here with link to CSS. -->
   <head>
-    <title>Tip Calculator</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js"></script>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="styles.css" />
+      <!-- Enter title here. -->
+      <title>Tip Calculator</title>
   </head>
+  <!-- Enter body here. -->
   <body>
-    <div id="container">
-      <div id="calculator">
-        <h1>Tip Calculator</h1>
-        <form>
-          <p>How much was your Bill?</p>
-          <p>
-            $
-            <input
-              id="billamount"
-              type="number"
-              placeholder="Enter bill amount..."
-            />
-          </p>
-          <p>How was your service?</p>
-          <select id="service">
-            <option selected disabled value="0">Select Level of Service</option>
-            <option value="0.25">Outstanding Service</option>
-            <option value="0.2">Great Service</option>
-            <option value="0.15">Good Service</option>
-            <option value="0.1">OK Service</option>
-            <option value="0.05">Lousy Service</option>
-            <option value="0.00">Terrible Service</option>
-          </select>
-
-          <p>How many people are sharing the Bill?</p>
-          <p>
-            <input
-              id="peopleamount"
-              type="number"
-              placeholder="Enter number of people..."
-            />
-            People
-          </p>
-        </form>
-        <button type="button" id="btnClick">Calculate</button>
-      </div>
-
-      <div id="totaltip">
-        <sup>$</sup><span id="tip">0.00</span>
-        <small id="each">Each</small>
-      </div>
-    </div>
+      <main class="main">
+          <!-- Enter bill div here. -->
+          <div class="input-left-side">
+              <div class="input-container">
+                  <span class="label">Bill Amount</span>
+                  <input id="input-bill" type="number" name="bill-amount" placeholder="Enter bill amount here."></input>
+              </div>
+              <!-- Enter tip div container here. -->
+              <div class="input-container">
+                  <span class="label">Tip %</span>
+                  <input id="input-tip" type="number" name="tip-amount" placeholder="Enter tip percent here."></input>
+              </div>
+              <!-- Enter people div container here. -->
+              <div class="input-container">
+                  <span class="label">Number of People</span>
+                  <input id="input-people" type="number" name="number-of-people" placeholder="Enter # of people here."></input>
+              </div>
+          </div>
+          <!-- Enter output div here. -->
+          <div class="output-right-side">
+              <div class="display">Tip:<h5 id="display-tip"></h5></div>
+              <div class="display">Toal Bill:<h5 id="display-total"></h5></div>
+              <div class="display">Per Person Amount:<h5 id="display-each"></h5></div>
+          </div>
+      </main>
+      <!-- Enter link to JS here. -->
+      <script src="script.js"></script>
+  <!-- End body here. -->
   </body>
 </html>
